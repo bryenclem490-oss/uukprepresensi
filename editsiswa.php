@@ -26,7 +26,7 @@ $error = "NISN wajib 10 digit";
 <p><?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?></p>
 <?php endif; ?>
 <form method="post">
-NISN : <input type="text" name="nisn" required><br>
+NISN : <input type="number" name="nisn" required><br>
 Nama : <input type="text" name="nama" required><br>
 Alamat : <input type="text" name="alamat"><br>
 <select name="idkelas" id="idkelas" required>
