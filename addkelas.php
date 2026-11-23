@@ -4,8 +4,8 @@ require_once "auth.php";
 require_once "seeder.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  $db = new Database();
- $siswa = new Kelas($db->getConnection());
- $siswa->tambah($_POST['namakelas'], $_POST['jurusan']);
+ $kelas = new Kelas($db->getConnection());
+ $kelas->tambah($_POST['namakelas'], $_POST['jurusan']);
  header("Location: kelas.php");
  exit;
 }
