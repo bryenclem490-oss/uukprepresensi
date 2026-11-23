@@ -12,8 +12,8 @@ $stmt = $pdo->query("SELECT id_kelas, nama_kelas FROM kelas ORDER BY nama_kelas 
 $daftarKelas = $stmt->fetchAll();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if (mb_strlen($_POST['nisn'], 'UTF-8') == 10) {
-$produk = new Siswa($db->getConnection());
-$produk->ubah($_GET['id'],$_POST['nisn'], $_POST['nama'], $_POST['alamat'], $_POST['idkelas']);
+$siswa = new Siswa($db->getConnection());
+$siswa->ubah($_GET['id'],$_POST['nisn'], $_POST['nama'], $_POST['alamat'], $_POST['idkelas']);
 header("Location: siswa.php");
 exit;
 } else {
