@@ -8,8 +8,8 @@ exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  $db = new Database();
- $produk = new Kelas($db->getConnection());
- $produk->ubah($_GET['id'],$_POST['namakelas'], $_POST['jurusan']);
+ $kelas = new Kelas($db->getConnection());
+ $kelas->ubah($_GET['id'],$_POST['namakelas'], $_POST['jurusan']);
  header("Location: kelas.php");
  exit;
 }
